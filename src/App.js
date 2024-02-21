@@ -1,20 +1,21 @@
-// App.js
-import React from 'react';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import HomePage from './HomePage';
-import SignUpPage from './SignupPage';
-import LoginPage from './LoginPage';
-const App = () => {
-  return (
+import React from "react";
+import {BrowserRouter as Router, Route,Routes} from "react-router-dom";
+//import Home from './Home';
+import Home from './Home';
+import Login from "./Login";
+import Signup from "./Signup";
+import AboutUsPage from "./aboutus";
+const App =() =>{
+
+  return(
     <Router>
       <Routes>
-      <Route path="/" element={<HomePage />} />
-      <Route path="/login" element={<LoginPage />} />
-      <Route path="/signup" element={<SignUpPage />} />
+        <Route path="/" element={<Home/>}/>
+        <Route path="/Login" element={<Login/>}/>
+        <Route path="/Signup" element={<Signup/>}/>
+        <Route path="/aboutus"element={<AboutUsPage/>}/>
       </Routes>
-       
     </Router>
   );
 };
-
-export default App;
+export default App

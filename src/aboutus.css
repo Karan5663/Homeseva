@@ -1,0 +1,55 @@
+.about-container {
+    max-width: fit-content; /* Set maximum width */
+    margin: 0 auto; /* Center the container */
+    padding: 20px; /* Add padding */
+    flex: 1;
+  
+  }
+  .about {
+    background-color: rgb(39, 38, 38);
+    color: aliceblue;
+    text-decoration:solid;
+    text-align: center;
+
+  }
+  /* Heading styles */
+ h1 {
+    font-size: 2.5rem; /* Set font size */
+    margin-bottom: 20px; /* Add bottom margin */
+    text-align: center;
+    color: red;
+  }
+  
+h2 {
+    font-size: 1.8rem; /* Set font size */
+    margin-top: 30px; /* Add top margin */
+    margin-bottom: 15px; /* Add bottom margin */
+  
+    color: red;
+  }
+  
+  /* Paragraph styles */
+  p {
+    font-size: 1.1rem; /* Set font size */
+    line-height: 1.6; /* Set line height */
+    margin-bottom: 15px; /* Add bottom margin */
+  }
+  
+  /* List styles */
+  ul {
+    margin-bottom: 20px; /* Add bottom margin */
+  }
+  
+  li {
+    margin-bottom: 20px; /* Add bottom margin */
+  }
+  
+  /* Link styles */
+  a {
+    color: #007bff; /* Set link color */
+    text-decoration: none; /* Remove underline */
+  }
+  
+  a:hover {
+    text-decoration: underline; /* Add underline on hover */
+  }
