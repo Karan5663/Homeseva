@@ -1,9 +1,11 @@
 import React from 'react';
-import './Login.css'; // Import the corresponding CSS file
+import './Signup.css'; // Import the corresponding CSS file
 import Layout from './layout';
 function Signup() {
   return (
+    <div className="baground">
     <Layout>
+      
     <div className="Signup-container">
       <h2>Signup to Home Services</h2>
       <form>
@@ -22,7 +24,9 @@ function Signup() {
         <button type="submit">Signup</button>
       </form>
     </div>
+
     </Layout>
+    </div>
   );
 }
 

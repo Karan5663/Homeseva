@@ -1,15 +1,16 @@
 .about-container {
-    max-width: fit-content; /* Set maximum width */
+  max-width: fit-content; /* Set maximum width */
     margin: 0 auto; /* Center the container */
-    padding: 20px; /* Add padding */
-    flex: 1;
+    flex: 2;
   
   }
   .about {
-    background-color: rgb(39, 38, 38);
+    background-color:#3b945e;
     color: aliceblue;
     text-decoration:solid;
     text-align: center;
+    max-height: fit-content;
+    max-width: fit-content;
 
   }
   /* Heading styles */
@@ -17,7 +18,7 @@
     font-size: 2.5rem; /* Set font size */
     margin-bottom: 20px; /* Add bottom margin */
     text-align: center;
-    color: red;
+    color: #182628;
   }
   
 h2 {
@@ -25,7 +26,7 @@ h2 {
     margin-top: 30px; /* Add top margin */
     margin-bottom: 15px; /* Add bottom margin */
   
-    color: red;
+    color: #182628;
   }
   
   /* Paragraph styles */
@@ -46,7 +47,7 @@ h2 {
   
   /* Link styles */
   a {
-    color: #007bff; /* Set link color */
+    color: red; /* Set link color */
     text-decoration: none; /* Remove underline */
   }
   

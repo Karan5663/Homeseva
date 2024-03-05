@@ -4,8 +4,9 @@ import Layout from './layout';
 
 const AboutUsPage = () => {
   return (
-    <Layout>
+   
     <div className='about'>
+       <Layout>
       <h1>About Home Seva</h1>
       <p>Welcome to Home Seva, your trusted partner in home services!</p>
       <p>At Home Seva, we understand the importance of a well-maintained home.</p>
@@ -22,8 +23,9 @@ const AboutUsPage = () => {
       <p>Our team consists of dedicated professionals with years of experience in their respective fields. From plumbers and electricians to cleaners and gardeners, we have experts ready to assist you with all your home service needs.</p>
       <h2>Contact Us</h2>
       <p>If you have any questions or would like to learn more about our services, don't hesitate to get in touch with us. You can reach us via email at <a href="mailto:info@homeseva.com">info@homeseva.com</a> or by phone at 1-800-HOME-SEVA.</p>
+      </Layout>
     </div>
-    </Layout>
+    
   );
 
 };

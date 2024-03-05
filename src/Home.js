@@ -1,6 +1,6 @@
 import React from 'react';
 import './Home.css';
-import { Link } from 'react-router-dom';
+//import { Link } from 'react-router-dom';
 import Layout from './layout';;
 
 function App() {
@@ -18,12 +18,12 @@ function App() {
         </p>
         <a
           className="App-link"
-          href="#services"
+          href="#services" style={{color:'red'}}
         >
           Explore Our Services
         </a>
       </header>
-
+    <section classname="footer">
       <section id="services" className="App-services">
         <h2>Our Services</h2>
         <ul>
@@ -44,6 +44,7 @@ function App() {
           Ready to make your life easier? Contact us for all your home service needs.
         </p>
         {/* Add a contact form or contact information here */}
+      </section>
       </section>
     </div>
     </Layout>

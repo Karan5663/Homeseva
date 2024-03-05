@@ -1,0 +1,31 @@
+.services-container1,
+.services-container2,
+.services-container3 {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 20px;
+  border: 12px;
+}
+
+.service-card {
+  max-width: 1000px;
+  margin: 50px auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+}
+
+.icon {
+  width: 150px; /* Set a fixed width */
+  height: 150px; /* Set a fixed height */
+  font-size: 50px;
+  color: #61dafb;
+  border: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
