@@ -8,6 +8,7 @@ import Contact from "./Screens/Contact";
 import Ourservices from "./Screens/Ourservices";
 import HomeCleaning from "./Screens/HomeCleaning";
 import Serviceprovider from "./Screens/Serviceprovider";
+import Contactform from "./Screens/contactform";
 const App =() =>{
 
   return(
@@ -22,6 +23,7 @@ const App =() =>{
         <Route path="/Ourservices"element={<Ourservices/>}/>
         <Route path="/HomeCleaning"element={<HomeCleaning/>}/>
         <Route path="/Serviceprovider"element={<Serviceprovider/>}/>
+        <Route path="/contactform"element={<Contactform/>}/>
       </Routes>
     </Router>
   );
