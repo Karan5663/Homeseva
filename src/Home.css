@@ -67,7 +67,6 @@ background-color: #182628;
 
 Additional styles for location, search box, and login button */
 
-
 .App {
   text-align: center;
   height: fit-content;
@@ -98,8 +97,11 @@ Additional styles for location, search box, and login button */
 .centerlised-img {
   max-width: 100%;
   max-height: 100%;
-  filter: blur(10px); /* Adjust the blur amount as needed */
+  filter: blur(100px); /* Adjust the blur amount as needed */
   opacity: 0.3; /* Decrease the opacity further to make the image fainter */
+  background-image: url('./Img/homeservice.jpg'); /* Add your background image URL */
+  background-size: cover; /* Make sure the image covers the entire element */
+  background-position: center; /* Center the background image */
 }
 
 .text-overlay {
@@ -134,3 +136,21 @@ Additional styles for location, search box, and login button */
   width: 1px;
 }
 
+.text-overlay h1 {
+  font-size: 3rem; /* Adjust the font size as needed */
+  font-weight: bold;
+  color: #fff; /* Specify the color you want */
+  margin-bottom: 10px; /* Add some bottom margin for spacing */
+}
+
+.text-overlay p {
+  font-size: 1.5rem; /* Adjust the font size as needed */
+  color: #fff; /* Specify the color you want */
+  margin-bottom: 15px; /* Add some bottom margin for spacing */
+}
+
+.text-overlay a {
+  color: red;
+  text-decoration: none;
+  font-weight: bold;
+}
