@@ -5,8 +5,8 @@
   background-color: black;
   }
   .about {
-    background-color:#3b945e;
-    color: aliceblue;
+    background-color:#fff4d5;
+    color: black;
     text-decoration:solid;
     text-align: center;
     max-height: fit-content;
@@ -47,7 +47,7 @@ h2 {
   
   /* Link styles */
   a {
-    color:red; /* Set link color */
+    color:#ff5100; /* Set link color */
     text-decoration: none; /* Remove underline */
   }
   

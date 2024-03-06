@@ -7,16 +7,20 @@
   flex-wrap: wrap;
   margin: 20px;
   border: 12px;
+
+}
+.Service{
+  background-color: #fff4d5;
 }
 
 .service-card {
   max-width: 1000px;
   margin: 50px auto;
   padding: 20px;
-  border: 1px solid #ccc;
+  border: 1px solid #fff4d5;
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  background-color: #fff;
+  background-color: #ffc929;
 }
 
 .icon {
