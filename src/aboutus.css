@@ -2,7 +2,7 @@
   max-width: fit-content; /* Set maximum width */
     margin: 0 auto; /* Center the container */
     flex: 2;
-  
+  background-color: black;
   }
   .about {
     background-color:#3b945e;
@@ -18,7 +18,7 @@
     font-size: 2.5rem; /* Set font size */
     margin-bottom: 20px; /* Add bottom margin */
     text-align: center;
-    color: #182628;
+    color: rgb(10, 18, 11);
   }
   
 h2 {
@@ -26,7 +26,7 @@ h2 {
     margin-top: 30px; /* Add top margin */
     margin-bottom: 15px; /* Add bottom margin */
   
-    color: #182628;
+    color: rgb(14, 11, 11);
   }
   
   /* Paragraph styles */
@@ -47,7 +47,7 @@ h2 {
   
   /* Link styles */
   a {
-    color: red; /* Set link color */
+    color:red; /* Set link color */
     text-decoration: none; /* Remove underline */
   }
   
