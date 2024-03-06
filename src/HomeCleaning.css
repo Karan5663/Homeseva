@@ -1,21 +1,60 @@
-/* Customize styles as needed */
-.service-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    margin: 20px;
+/* Default styles */
+.service-container1,
+.service-container2 {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 20px;
+}
+
+.service-card {
+  max-width: 200px; /* Adjust maximum width as needed */
+  width: 100%;
+  margin: 20px;
+  padding: 20px;
+  border-radius: 8px;
+  display: flex; /* Added */
+  flex-direction: column; /* Added */
+  justify-content: center;
+  align-items: center; /* Center content vertically */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  background-color: #ffc929;
+}
+
+.icon {
+  font-size: 24px;
+  margin-bottom: 10px;
+  color: #fff4d5;
+}
+
+.service {
+  color: #fff4d5;
+  background-color: #fff4d5;
+}
+
+/* Responsive styles */
+@media screen and (max-width: 768px) {
+  .services-container1,
+  .services-container2 {
+    margin: 10px;
   }
   
   .service-card {
-    text-align: center;
-    margin: 15px;
-    padding: 20px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
+    max-width: 300px;
   }
   
   .icon {
-    font-size: 24px;
-    margin-bottom: 10px;
+    font-size: 20px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .service-card {
+    max-width: 250px;
   }
   
+  .icon {
+    font-size: 18px;
+  }
+}
