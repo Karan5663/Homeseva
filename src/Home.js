@@ -1,7 +1,8 @@
 import React from 'react';
 import './Home.css';
 //import { Link } from 'react-router-dom';
-import Layout from './layout';;
+import Layout from './layout';
+import backgroundImage from './Img/homeservice.jpg'
 
 function App() {
   return (
@@ -9,6 +10,9 @@ function App() {
     <div className="App">
       
       <header className="App-header">
+      <img src={backgroundImage} classname="centerlised-img"/>
+      <div className="text-overlay">
+          
         <h1>Welcome to HomeSeva</h1>
         <p>
           We provide a range of home services to make your life easier.
@@ -22,6 +26,7 @@ function App() {
         >
           Explore Our Services
         </a>
+        </div>
       </header>
     <section classname="footer">
       <section id="services" className="App-services">

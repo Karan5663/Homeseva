@@ -1,7 +1,6 @@
-.App {
+/* .App {
   text-align: center;
   height: fit-content;
-
 }
 
 .App-logo {
@@ -16,13 +15,33 @@
 }
 
 .App-header {
-  background-color: #3b945e;
+ 
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
+  color: white;
+
+}
+
+.centerlised-img {
+max-width:  100%;
+max-height:100%;
+opacity: 0.5;}
+
+.text-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 925px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.5); 
   color: white;
 }
 
@@ -45,4 +64,73 @@ background-color: #182628;
 }
 
 
-/* Additional styles for location, search box, and login button */
+
+Additional styles for location, search box, and login button */
+
+
+.App {
+  text-align: center;
+  height: fit-content;
+}
+
+.App-logo {
+  height: 20vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+  position: relative; /* Add this to make sure the overlay covers the entire header */
+}
+
+.centerlised-img {
+  max-width: 100%;
+  max-height: 100%;
+  filter: blur(10px); /* Adjust the blur amount as needed */
+  opacity: 0.3; /* Decrease the opacity further to make the image fainter */
+}
+
+.text-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.3); /* Decrease opacity of the background color */
+  color: white;
+  opacity: 0.9; /* Increase the opacity of the text overlay */
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+.footer {
+  background-color: #182628;
+}
+
+.App-options input a {
+  margin-right: 10px;
+  padding: 8px;
+  border: none;
+  border-radius: 5px;
+  font-size: 14px;
+  width: 1px;
+}
+
