@@ -74,6 +74,7 @@ import { Link } from 'react-router-dom';
 function Ourservices() {
   return (
     <Layout>
+      <div className='Service'>
       <div className="services-container1">
         <Link to="/HomeCleaning" className="service-card">
           <FaHome className="icon" />
@@ -123,6 +124,7 @@ function Ourservices() {
           <FaLeaf className="icon" />
           <h3>Gardening</h3>
         </Link>
+      </div>
       </div>
     </Layout>
   );
