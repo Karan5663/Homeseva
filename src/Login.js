@@ -5,6 +5,7 @@ import Layout from './layout';
 
 function Login() {
   return (
+    
     <Layout>
     <div className="login-container">
       <h2>Login to Home Services</h2>
@@ -17,11 +18,12 @@ function Login() {
 
         <button type="submit">Login</button>
         <nav>
-         <ul> <Link to ="/Signup">Signup</Link> </ul>
+         <ul> <Link to ="/Signup" style={{marginLeft:71}}>--------Or Sign up--------</Link> </ul>
         </nav>
       </form>
     </div>
     </Layout>
+   
   );
 }
 

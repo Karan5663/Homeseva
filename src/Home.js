@@ -24,7 +24,7 @@ function App() {
           className="App-link"
           href="#services" style={{color:'red'}}
         >
-          <Link to="/Ourservices" className="Applink">
+          <Link to="/Ourservices" className="Applink" style={{ color: 'white' }}>
           Explore Our Services
           </Link>
         </a>

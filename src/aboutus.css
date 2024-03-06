@@ -6,7 +6,7 @@
   }
   .about {
     background-color:#fff4d5;
-    color: black;
+    color:#FF8200;
     text-decoration:solid;
     text-align: center;
     max-height: fit-content;
@@ -18,7 +18,7 @@
     font-size: 2.5rem; /* Set font size */
     margin-bottom: 20px; /* Add bottom margin */
     text-align: center;
-    color: rgb(10, 18, 11);
+    color:#ff5100
   }
   
 h2 {
@@ -26,7 +26,7 @@ h2 {
     margin-top: 30px; /* Add top margin */
     margin-bottom: 15px; /* Add bottom margin */
   
-    color: rgb(14, 11, 11);
+    color:#ff5100
   }
   
   /* Paragraph styles */

@@ -5,7 +5,7 @@
     border: 1px solid #ccc;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    background-color: #fff;
+    background-color:#ffc929;
   }
   
   h2 {
@@ -31,7 +31,7 @@
   }
   
   button {
-    background-color: rgb(125, 203, 231);
+    background-color: #fff4D5;
     color: #e41414;
     padding: 12px;
     border: none;
@@ -41,9 +41,9 @@
   }
   
   button:hover {
-    background-color: #4fa3d1;
+    background-color: #ff8200;
   }
 .baground {
-    background-color: #3b945e;
-    height: 700px;
+    background-color: #fffc9c;
+    height: 735px;
   }
