@@ -1,6 +1,6 @@
 .about-container {
-  max-width: fit-content; /* Set maximum width */
-    margin: 0 auto; /* Center the container */
+  max-width: fit-content;
+    margin: 0 auto; 
     flex: 2;
   background-color: black;
   }
@@ -13,10 +13,10 @@
     max-width: fit-content;
 
   }
-  /* Heading styles */
+
  h1 {
-    font-size: 2.5rem; /* Set font size */
-    margin-bottom: 20px; /* Add bottom margin */
+    font-size: 2.5rem;
+    margin-bottom: 20px; 
     text-align: center;
     color:#ff5100
   }
@@ -25,20 +25,19 @@ h2 {
     font-size: 1.8rem; /* Set font size */
     margin-top: 30px; /* Add top margin */
     margin-bottom: 15px; /* Add bottom margin */
-  
     color:#ff5100
   }
   
-  /* Paragraph styles */
+ 
   p {
-    font-size: 1.1rem; /* Set font size */
-    line-height: 1.6; /* Set line height */
-    margin-bottom: 15px; /* Add bottom margin */
+    font-size: 1.1rem; 
+    line-height: 1.6; 
+    margin-bottom: 15px;
   }
   
-  /* List styles */
+
   ul {
-    margin-bottom: 20px; /* Add bottom margin */
+    margin-bottom: 20px; 
   }
   
   li {

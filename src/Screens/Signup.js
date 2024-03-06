@@ -7,7 +7,7 @@ function Signup() {
     <Layout>
       
     <div className="Signup-container">
-      <h2>Signup to Home Services</h2>
+      <h2>Signup to HomeSeva</h2>
       <form>
         <label htmlFor="username">Username:</label>
         <input type="text" id="username" name="username" />
@@ -21,7 +21,7 @@ function Signup() {
         <label htmlFor="Phone">PhoneNo:</label>
         <input type="number" id="phone" name="phone" />
 
-        <button type="submit">Signup</button>
+        <button type="submit"style={{color:'black'}}>Signup</button>
       </form>
     </div>
 

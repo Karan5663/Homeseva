@@ -1,5 +1,5 @@
 import React from 'react';
-import '../css/Login.css'; // Import the corresponding CSS file
+import '../css/Login.css';
 import { Link } from 'react-router-dom';
 import Layout from './layout';
 
@@ -7,9 +7,9 @@ function Login() {
   return (
     
     <Layout>
-      <div className='screen'>
+      <div className='screen' style={{height:660,marginTop:-51}}>
     <div className="login-container">
-      <h2>Login to Home Services</h2>
+      <h2>Login to HomeSeva</h2>
       <form>
         <label htmlFor="username">Username:</label>
         <input type="text" id="username" name="username" />
@@ -17,9 +17,10 @@ function Login() {
         <label htmlFor="password">Password:</label>
         <input type="password" id="password" name="password" />
 
-        <button type="submit">Login</button>
+        <button type="submit" style={{color:'black'}}>Login</button>
         <nav>
          <ul> <Link to ="/Signup" style={{marginLeft:71}}>--------Or Sign up--------</Link> </ul>
+         <ul> <Link to ="/Serviceprovider" style={{marginLeft:30}}>---Or Register as Service Provider---</Link> </ul>
         </nav>
       </form>
       </div>

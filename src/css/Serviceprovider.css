@@ -1,15 +1,14 @@
-  body, html {
+body, html {
     height: 100%;
     margin: 0;
   }
   
-  .baground {
+  .screen {
     background-color: #fffc9c;
     height: 100%;
   }
   
   .login-container {
-
     max-width: 400px;
     margin: 50px auto;
     padding: 20px;
@@ -17,10 +16,6 @@
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     background-color: #ffc929;
-  }
-  
-  .screen {
-    background-color: #fffc9c;
   }
   
   h2 {
@@ -38,6 +33,14 @@
   }
   
   input {
+    padding: 10px;
+    margin-bottom: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+  }
+  
+  select {
     padding: 10px;
     margin-bottom: 16px;
     border: 1px solid #ccc;
