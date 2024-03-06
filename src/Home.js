@@ -1,6 +1,6 @@
 import React from 'react';
 import './Home.css';
-import { Link } from 'react-router-dom';
+//import { Link } from 'react-router-dom';
 import Layout from './layout';
 import backgroundImage from './Img/homeservice.jpg'
 
@@ -23,13 +23,34 @@ function App() {
         <a
           className="App-link"
           href="#services" style={{color:'red'}}
-        > <Link to="/Ourservices" className="App-link">
+        >
           Explore Our Services
-          </Link>
         </a>
-        
         </div>
       </header>
+    <section classname="footer">
+      <section id="services" className="App-services">
+        <h2>Our Services</h2>
+        <ul>
+          <li>Cleaning</li>
+          <li>Repairs</li>
+          <li>Maintenance</li>
+          {/* Add more services as needed */}
+        </ul>
+      </section>
+
+      <section id="contact" className="App-contact">
+        <h2>Contact Us</h2>
+        <ul>
+          <li>Email:info@HomeSeva.com</li>
+          <li>Phone:123-556-1263</li>
+        </ul>
+        <p>
+          Ready to make your life easier? Contact us for all your home service needs.
+        </p>
+        {/* Add a contact form or contact information here */}
+      </section>
+      </section>
     </div>
     </Layout>
   );
