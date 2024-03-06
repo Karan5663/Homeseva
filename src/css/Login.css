@@ -7,7 +7,9 @@
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     background-color: #ffc929;
   }
-  
+  .screen{
+    background-color: #fff4D5;
+  }
   h2 {
     text-align: center;
     color: #333;

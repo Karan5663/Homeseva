@@ -21,7 +21,7 @@
   filter: blur(10px); /* Adjust the blur amount as needed */
   opacity: 0.3; /* Decrease the opacity further to make the image fainter */
 
-  background-image: url('./Img/homeservice.jpg'); /* Add your background image URL */
+  background-image: url('../Img/homeservice.jpg'); /* Add your background image URL */
   background-size: cover; /* Make sure the image covers the entire element */
   background-position: center; /* Center the background image */
   position: relative;

@@ -1,5 +1,5 @@
 import React from 'react';
-import './Signup.css'; // Import the corresponding CSS file
+import '../css/Signup.css'; // Import the corresponding CSS file
 import Layout from './layout';
 function Signup() {
   return (

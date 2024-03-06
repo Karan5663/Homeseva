@@ -1,7 +1,7 @@
 // Layout.js
 
 import React from 'react';
-import Navbar from './navbar';
+import Navbar from './navbar.js';
 
 const Layout = ({ children }) => {
   return (

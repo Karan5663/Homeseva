@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import './navbar.css';
-import logo from './Img/logo.jpg'
+import '../css/navbar.css';
+import logo from '../Img/logo.jpg'
 
 const Navbar = () => {
   return (
@@ -10,7 +10,7 @@ const Navbar = () => {
           src={logo} 
           alt="Logo"
           className="logo-image"
-          style={{padding:10,marginTop:-12, height: '45px', width: '60px' }}
+          style={{padding:10,marginTop:-12, height: '45px', width: '60px',borderRadius: '80px' }}
       />
 
       <select>

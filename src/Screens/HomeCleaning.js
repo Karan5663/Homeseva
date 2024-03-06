@@ -2,7 +2,7 @@ import React from 'react';
 import { FaHome } from 'react-icons/fa';
 import { Link } from 'react-router-dom'; // Import Link from react-router-dom
 import Layout from './layout';
-import './HomeCleaning.css';
+import '../css/HomeCleaning.css';
 
 function HomeCleaning() {
   return (

@@ -1,8 +1,9 @@
 import React from 'react';
-import './Home.css';
+import '../css/Home.css';
+//import './Home.css';
 import { Link } from 'react-router-dom';
 import Layout from './layout';
-import backgroundImage from './Img/homeservice.jpg'
+import backgroundImage from '../Img/homeservice.jpg'
 
 function App() {
   return (
