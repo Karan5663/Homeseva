@@ -9,6 +9,11 @@ import Ourservices from "./Screens/Ourservices";
 import HomeCleaning from "./Screens/HomeCleaning";
 import Serviceprovider from "./Screens/Serviceprovider";
 import Contactform from "./Screens/contactform";
+import HomePainting from "./Screens/HomePainting";
+import Plumbing from "./Screens/Plumbing";
+import Electrician from "./Screens/Electrician";
+import PestControl from "./Screens/PestControl";
+import HomeAppliances from "./Screens/HomeAppliances";
 const App =() =>{
 
   return(
@@ -24,6 +29,11 @@ const App =() =>{
         <Route path="/HomeCleaning"element={<HomeCleaning/>}/>
         <Route path="/Serviceprovider"element={<Serviceprovider/>}/>
         <Route path="/contactform"element={<Contactform/>}/>
+        <Route path="/HomePainting"element={<HomePainting/>}/>
+        <Route path="/Plumbing"element={<Plumbing/>}/>
+        <Route path="/Electrician"element={<Electrician/>}/>
+        <Route path="/PestControl"element={<PestControl/>}/>
+        <Route path="/HomeAppliances"element={<HomeAppliances/>}/>
       </Routes>
     </Router>
   );
