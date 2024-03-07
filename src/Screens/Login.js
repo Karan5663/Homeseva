@@ -7,7 +7,7 @@ function Login() {
   return (
     
     <Layout>
-      <div className='screen' style={{height:660,marginTop:-51}}>
+      <div className='screen' style={{height:600,marginTop:20}}>
     <div className="login-container">
       <h2>Login to HomeSeva</h2>
       <form>

@@ -17,6 +17,12 @@ function Serviceprovider() {
                     <label htmlFor="name">Name:</label>
                     <input type="text" id="name" name="name" required />
 
+                    <label htmlFor="Address">Address:</label>
+                    <input type="text" id="Address" name="Address" required />
+
+                    <label htmlFor="Occupation">occupation:</label>
+                    <input type="text" id="Occupation" name="Occupation" required />
+
                     <label htmlFor="contact">Contact Number:</label>
                     <input type="text" id="contact" name="contact" required />
 

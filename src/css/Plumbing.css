@@ -18,8 +18,8 @@
     text-align: center;
     border: 1px solid #ccc;
     border-radius: 5px;
-    width: calc(33.33% - 40px); /* Three services per row */
-    max-width: 300px; /* Limit width for smaller screens */
+    width: calc(33.33% - 40px);
+    max-width: 300px; 
   }
   
   .icon {
@@ -30,5 +30,4 @@
     margin-top: 10px;
   }
   
-  /* Add more styling as needed */
   

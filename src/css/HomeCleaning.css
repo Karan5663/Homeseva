@@ -6,6 +6,7 @@ Default styles
   align-items: center;
   flex-wrap: wrap;
   margin: 20px;
+  border: 12px;
 }
 
 .service-card {
