@@ -1,13 +1,69 @@
+// const express = require('express');
+// const cors = require('cors');
+// const bodyparser = require('body-parser');
+// const mongoose = require('mongoose');
+
+// main().catch(err => console.log(err));
+
+// async function main() {
+//   await mongoose.connect('mongodb://127.0.0.1:27017/homeseva');
+//   console.log('db connected');
+// }
+
+// const userSchema = new mongoose.Schema({
+    // username: String,
+    // Email: String,
+    // Password: String,
+    // phone: String
+//   });
+
+//   const User = mongoose.model('User', userSchema);
+
+// const server = express();
+
+// server.use(cors());
+// server.use(bodyparser.json());
+
+// server.post('/demo',async(req,res)=>{
+
+    // let user = new User();
+    // user.username = req.body.username;
+    // user.Email = req.body.Email;
+    // user.Password = req.body.Password;
+    // user.phone = req.body.phone;
+//   const doc = await user.save();
+
+    // console.log(doc);
+    // res.json(doc);
+// })
+
+
+// server.get('/demo',async(req,res)=>{
+//   const docs = await User.find({});
+//   res.json(docs);
+
+// })
+
+// server.listen(8080,()=>{
+    // console.log('server started')
+    
+// })
+
+/************************************************/
+
+
 const express = require('express');
 const cors = require('cors');
-const bodyparser = require('body-parser');
+const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
+
+const app = express();
 
 main().catch(err => console.log(err));
 
 async function main() {
-  await mongoose.connect('mongodb://127.0.0.1:27017/homeseva');
-  console.log('db connected');
+    await mongoose.connect('mongodb://127.0.0.1:27017/homeseva');
+    console.log('db connected');
 }
 
 const userSchema = new mongoose.Schema({
@@ -15,48 +71,67 @@ const userSchema = new mongoose.Schema({
     Email: String,
     Password: String,
     phone: String
-  });
+});
 
-  const User = mongoose.model('User', userSchema);
+const User = mongoose.model('User', userSchema);
 
-const server = express();
+const providerSchema = new mongoose.Schema({
+    username: String,
+    work: String,
+    location: String,
+    phoneNo: String
+});
 
-server.use(cors());
-server.use(bodyparser.json());
+const Provider = mongoose.model('Provider', providerSchema);
 
-server.post('/demo',async(req,res)=>{
+app.use(cors());
+app.use(bodyParser.json());
 
-    let user = new User();
-    user.username = req.body.username;
-    user.Email = req.body.Email;
-    user.Password = req.body.Password;
-    user.phone = req.body.phone;
-  const doc = await user.save();
+app.post('/demo', async (req, res) => {
+    try {
+        const { username, Email, Password, phone } = req.body;
+        const newUser = new User({ username, Email, Password, phone });
+        const doc = await newUser.save();
+        res.status(201).json(doc);
+    } catch (error) {
+        console.error(error);
+        res.status(500).json({ error: 'Internal server error' });
+    }
+});
 
-    console.log(doc);
-    res.json(doc);
-})
+app.post('/postService', async (req, res) => {
+    try {
+        const { username, work, location, phoneNo } = req.body;
+        const newProvider = new Provider({ username, work, location, phoneNo });
+        const doc = await newProvider.save();
+        res.status(201).json(doc);
+    } catch (error) {
+        console.error(error);
+        res.status(500).json({ error: 'Internal server error' });
+    }
+});
 
-server.post('/provider',async(req,res)=>{//new
+app.get('/demo', async (req, res) => {
+    try {
+        const users = await User.find({});
+        res.json(users);
+    } catch (error) {
+        console.error(error);
+        res.status(500).json({ error: 'Internal server error' });
+    }
+});
 
-  let pro = new User();
-  pro.username = req.body.username;
-  pro.Email = req.body.Email;
-  pro.Password = req.body.Password;
-  pro.phone = req.body.phone;
-const doc = await pro.save();
+app.get('/getProviders', async (req, res) => {
+    try {
+        const providers = await Provider.find({});
+        res.json(providers);
+    } catch (error) {
+        console.error(error);
+        res.status(500).json({ error: 'Internal server error' });
+    }
+});
 
-  console.log(doc);
-  res.json(doc);
-})//new
-
-server.get('/demo',async(req,res)=>{
-  const docs = await User.find({});
-  res.json(docs);
-
-})
-
-server.listen(8080,()=>{
-    console.log('server started')
-    
-})
+const PORT = process.env.PORT || 8080;
+app.listen(PORT, () => {
+    console.log('Server started on port ${PORT}');
+});
