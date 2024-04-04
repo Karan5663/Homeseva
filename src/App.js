@@ -14,6 +14,8 @@ import Plumbing from "./Screens/Plumbing";
 import Electrician from "./Screens/Electrician";
 import PestControl from "./Screens/PestControl";
 import HomeAppliances from "./Screens/HomeAppliances";
+import ProviderLogin from "./Screens/ProviderLogin";
+import PostService from "./Screens/PostService";
 const App =() =>{
 
   return(
@@ -34,6 +36,8 @@ const App =() =>{
         <Route path="/Electrician"element={<Electrician/>}/>
         <Route path="/PestControl"element={<PestControl/>}/>
         <Route path="/HomeAppliances"element={<HomeAppliances/>}/>
+        <Route path="/ProviderLogin"element={<ProviderLogin/>}/>
+        <Route path="/PostService"element={<PostService/>}/>
       </Routes>
     </Router>
   );

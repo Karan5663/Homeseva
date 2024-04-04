@@ -21,6 +21,7 @@ function Login() {
         <nav>
          <ul> <Link to ="/Signup" style={{marginLeft:71}}>--------Or Sign up--------</Link> </ul>
          <ul> <Link to ="/Serviceprovider" style={{marginLeft:30}}>---Or Register as Service Provider---</Link> </ul>
+         <ul> <Link to ="/ProviderLogin" style={{marginLeft:30}}>---Or Login as Service provider ---</Link> </ul>
         </nav>
       </form>
       </div>
