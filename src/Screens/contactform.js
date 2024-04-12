@@ -32,11 +32,12 @@ const Contactform = () => {
 
   return (
     <Layout>
-    <div>
-      <div className='contact-container'>
-      <h2>Contact Information</h2>
+      <div className="continfo">
+      
+      <div className="contc">
       <form onSubmit={handleSubmit}>
-        <div>
+        
+          <h2>Contact Information</h2>
           <label htmlFor="name">Name:</label>
           <input
             type="text"
@@ -46,8 +47,6 @@ const Contactform = () => {
             onChange={handleChange}
             required
           />
-        </div>
-        <div>
           <label htmlFor="address">Address:</label>
           <input
             type="text"
@@ -57,8 +56,6 @@ const Contactform = () => {
             onChange={handleChange}
             required
           />
-        </div>
-        <div>
           <label htmlFor="phoneNumber">Phone Number:</label>
           <input
             type="tel"
@@ -68,8 +65,7 @@ const Contactform = () => {
             onChange={handleChange}
             required
           />
-        </div>
-        <div>
+        
           <label htmlFor="email">Email:</label>
           <input
             type="email"
@@ -79,11 +75,12 @@ const Contactform = () => {
             onChange={handleChange}
             required
           />
-        </div>
+      
         <button type="submit" style={{color:'black'}}>Submit</button>
       </form>
       </div>
-    </div>
+      </div>
+    
     </Layout>
   );
 };

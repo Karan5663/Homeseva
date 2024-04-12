@@ -7,10 +7,12 @@
   flex-wrap: wrap;
   margin: 20px;
   border: 12px;
-
+  margin-top: -5px;
 }
+
 .Service{
   background-color: #fff4d5;
+ 
 }
 
 .service-card {
