@@ -7,8 +7,10 @@ function Login() {
   return (
     
     <Layout>
-      <div className='screen' style={{height:600,marginTop:20}}>
-    <div className="login-container">
+      
+    <div className="loginc">
+
+      <div className="logincontent">
       <h2>Login to HomeSeva</h2>
       <form>
         <label htmlFor="username">Username:</label>
@@ -25,7 +27,8 @@ function Login() {
         </nav>
       </form>
       </div>
-    </div>
+      </div>
+    
     </Layout>
    
   );

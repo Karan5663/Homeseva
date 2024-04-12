@@ -1,26 +1,45 @@
-  body, html {
-    height: 100%;
-    margin: 0;
+  body {
+    background-image: url("../Img/loginbag.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
   }
   
   .baground {
-    background-color: #fffc9c;
-    height: 100%;
+    /* background-color: #fffc9c; */
+       height: 100vh;
+    
   }
   
   .login-container {
 
     max-width: 400px;
-    margin: 50px auto;
+    /* margin: 50px auto; */
     padding: 20px;
     border: 1px solid #ccc;
     border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    background-color: #ffc929;
+    /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); */
+    /* background-color: #ffc929; */
+    
   }
-  
-  .screen {
-    background-color: #fffc9c;
+  .logincontent{
+    background: transparent;
+    backdrop-filter: blur(10px);
+    height: 65vh;
+    width: 60vh;
+    border: 2px solid white;
+    border-radius: 10px;
+    padding: 15px;
+  }
+
+
+  .loginc {
+    height: 88vh;
+    width: 100%;
+    /* margin-top: 20px; */
+    /* background-color: #fffc9c; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
   
   h2 {
