@@ -17,6 +17,8 @@ import HomeAppliances from "./Screens/HomeAppliances";
 import ProviderLogin from "./Screens/ProviderLogin";
 import PostService from "./Screens/PostService";
 import UserInfoPage from "./Screens/UserInfoPage";
+import ProductContainer from "./Screens/ProductContainer";
+
 const App =() =>{
 
   return(
@@ -40,6 +42,8 @@ const App =() =>{
         <Route path="/ProviderLogin"element={<ProviderLogin/>}/>
         <Route path="/PostService"element={<PostService/>}/>
         <Route path="/UserInfoPage"element={<UserInfoPage/>}/>
+        <Route path="/ProductContainer"element={<ProductContainer/>}/>
+
       </Routes>
     </Router>
   );
