@@ -3,6 +3,7 @@ import '../css/Signup.css'; // Import the corresponding CSS file
 import Layout from './layout';
 //import { hasFormSubmit } from '@testing-library/user-event/dist/utils';
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 function Signup() {
 
@@ -23,7 +24,7 @@ function Signup() {
       headers:{
         'Content-Type':'application/json'
       }
-    })  
+    });
     const data = await response.json();
     console.log(data);
   }
@@ -61,7 +62,8 @@ function Signup() {
       </form>
       <div>
         <ul>
-         {users.map(user=> <li key={user._id}>{user.username},{user.Email}</li>)}
+         {/* {users.map(user=> <li key={user._id}>{user.username},{user.Email}</li>)} */}
+         {<Link to="/user-info">View All Users</Link>}
         </ul>
       </div>
     </div>

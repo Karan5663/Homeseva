@@ -16,6 +16,7 @@ import PestControl from "./Screens/PestControl";
 import HomeAppliances from "./Screens/HomeAppliances";
 import ProviderLogin from "./Screens/ProviderLogin";
 import PostService from "./Screens/PostService";
+import UserInfoPage from "./Screens/UserInfoPage";
 const App =() =>{
 
   return(
@@ -38,6 +39,7 @@ const App =() =>{
         <Route path="/HomeAppliances"element={<HomeAppliances/>}/>
         <Route path="/ProviderLogin"element={<ProviderLogin/>}/>
         <Route path="/PostService"element={<PostService/>}/>
+        <Route path="/UserInfoPage"element={<UserInfoPage/>}/>
       </Routes>
     </Router>
   );

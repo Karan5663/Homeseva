@@ -148,7 +148,9 @@ function PostService() {
 
     const getProviders = async () => {
         try {
-            const response = await fetch('http://localhost:8080/getProviders');
+            const response = await fetch('http://localhost:8080/getProviders',{
+            method:'GET',
+        })
             const data = await response.json();
             setProviders(data);
         } catch (error) {
@@ -219,13 +221,13 @@ function PostService() {
 
                         <button type="submit" style={{ color: 'black' }}>Post</button>
                     </form>
+                    <div>
                     <ul>
-                        {providers.map(provider => (
-                            <li key={provider._id}>
-                                Name: {provider.username}, Work: {provider.work}, Location: {provider.location}, Phone: {provider.phoneNo}
+                        {providers.map(provider=> <li key={provider._id}> Name: {provider.username}, Work: {provider.work}, Location: {provider.location}, Phone: {provider.phoneNo}
                             </li>
-                        ))}
+                        )}
                     </ul>
+                    </div>
                 </div>
             </div>
         </Layout>
