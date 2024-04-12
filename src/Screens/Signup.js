@@ -40,9 +40,9 @@ function Signup() {
     getUsers();
   },[])
     return (
-    <div className="baground">
+    
     <Layout>
-      
+      <div className='Signupc'>
     <div className="Signup-container">
       <h2>Signup to HomeSeva</h2>
       <form onSubmit={handleSubmit}>
@@ -67,9 +67,9 @@ function Signup() {
         </ul>
       </div>
     </div>
-
-    </Layout>
     </div>
+    </Layout>
+   
   );
 }
 

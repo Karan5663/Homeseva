@@ -1,8 +1,4 @@
-  body {
-    background-image: url("../Img/loginbag.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
-  }
+
   
   .baground {
     /* background-color: #fffc9c; */
@@ -33,13 +29,16 @@
 
 
   .loginc {
-    height: 88vh;
+    height: 90vh;
     width: 100%;
     /* margin-top: 20px; */
     /* background-color: #fffc9c; */
     display: flex;
     align-items: center;
     justify-content: center;
+    background-image: url("../Img/loginbag.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
   }
   
   h2 {

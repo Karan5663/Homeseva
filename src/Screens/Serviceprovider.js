@@ -8,10 +8,11 @@ function Serviceprovider() {
         
     };
 
+
     return (
         <Layout>
-            <div className="screen"></div>
-            <div className="login-container">
+            <div className="servicec">
+                <div className="service">
                 <h2>Service Provider Registration</h2>
                 <form onSubmit={handleSubmit}>
                     <label htmlFor="name">Name:</label>
@@ -57,6 +58,7 @@ function Serviceprovider() {
 
                     <button type="submit"style={{color:'black'}}>Submit</button>
                 </form>
+                </div>
             </div>
         </Layout>
     );

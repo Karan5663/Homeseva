@@ -1,23 +1,50 @@
 
   
-  .servicec {
-    background-image: url("../Img/service.png");
+  .baground {
+    /* background-color: #fffc9c; */
+       height: 100vh;
+    
+  }
+  
+  .providerc {
+    height: 90vh;
+    width: 100%;
+    background-image: url("../Img/ser.jpg");
     background-size: cover;
     background-repeat: no-repeat;
-    height: 105vh;
-    width: 100%;
+
     display: flex;
     align-items: center;
     justify-content: center;
 
+    
   }
-  .service{
+  .provider{
     background: transparent;
-    backdrop-filter: blur(50px);
-    height: 95vh;
+    backdrop-filter: blur(100px);
+    height: 65vh;
     width: 60vh;
     border: 2px solid white;
     border-radius: 10px;
+    padding: 15px;
+ 
+    /* margin-top: 20px; */
+    /* background-color: #fffc9c; */
+   
+  }
+
+
+  .loginc {
+    height: 90vh;
+    width: 100%;
+    /* margin-top: 20px; */
+    /* background-color: #fffc9c; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url("../Img/loginbag.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
   }
   
   h2 {
@@ -35,14 +62,6 @@
   }
   
   input {
-    padding: 10px;
-    margin-bottom: 16px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    font-size: 16px;
-  }
-  
-  select {
     padding: 10px;
     margin-bottom: 16px;
     border: 1px solid #ccc;

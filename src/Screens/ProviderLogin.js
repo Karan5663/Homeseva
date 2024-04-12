@@ -1,5 +1,5 @@
 import React from 'react';
-import '../css/Login.css';
+import '../css/Providerlogin.css';
 import { Link } from 'react-router-dom';
 import Layout from './layout';
 
@@ -11,8 +11,8 @@ function ProviderLogin() {
     
 
     <Layout>
-      <div className='screen' style={{height:600,marginTop:20}}>
-    <div className="login-container">
+      <div className='providerc'>
+    <div className="provider">
       <h2>Login to HomeSeva</h2>
       <form>
         <label htmlFor="username">Username:</label>
