@@ -1,34 +1,45 @@
 .service {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin-top: 50px;
-  }
-  
-  .service-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+.service-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.service-card {
+  margin: 20px;
+  padding: 20px;
+  text-align: center;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: calc(30% - 40px); /* Adjusted width to fit three cards per row */
+  max-width: 400px; /* Increased maximum width for larger screens */
+  height: 250px; /* Set fixed height for all service cards */
+}
+
+.icon {
+  font-size: 48px; /* Increase icon size */
+}
+
+.service-card h3 {
+  margin-top: -50px; /* Adjust top margin for better spacing */
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 768px) {
   .service-card {
-    margin: 20px;
-    padding: 20px;
-    text-align: center;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    width: calc(33.33% - 40px); /* Three services per row */
-    max-width: 300px; /* Limit width for smaller screens */
+    width: calc(50% - 40px); /* Two services per row on smaller screens */
   }
-  
-  .icon {
-    font-size: 36px;
+}
+
+@media screen and (max-width: 576px) {
+  .service-card {
+    width: calc(100% - 40px); /* One service per row on extra small screens */
   }
-  
-  .service-card h3 {
-    margin-top: 10px;
-  }
-  
-  /* Add more styling as needed */
-  
+}

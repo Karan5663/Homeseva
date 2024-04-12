@@ -20,18 +20,18 @@ function HomePainting() {
           <div className="service-card">
             <Link to="/contactform">
               <FaPaintRoller className="icon" />
-              <h3>Vacant Flat Painting</h3>
+              <h3>Exterior Painting</h3>
             </Link>
           </div>
 
-          <div className="service-card">
+          {/* <div className="service-card">
             <Link to='/contactform'>
               <FaPaintRoller className="icon" />
               <h3>Exterior Painting</h3>
             </Link>
-          </div>
-        </div>
-        <div className="service-container2">
+          </div> */}
+        {/* </div>
+        <div className="service-container2"> */}
           <div className="service-card">
             <Link to="/contactform">
               <FaPaintRoller className="icon" />
