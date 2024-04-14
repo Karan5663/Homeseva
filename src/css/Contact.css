@@ -1,31 +1,82 @@
-
-.contact-container {
-  margin-left: 350px;
-  margin-top: 100px;
-  max-width: 800px;
-  padding: 20px;
-  background-color:  #ffc266;
-  color: #ff5100;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(62, 22, 114, 0.1);
-}
-
-.contact-container h1 {
-  background-color:  #ffc266;
-  font-size: 2.5rem;
-  margin-bottom: 20px;
-  
-}
-
-.contact-info {
+.Contact {
+  height: 90vh;
+  width: 100%;
+  background-image: url("../Img/contactus.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
   display: flex;
-  flex-direction: column;
   align-items: center;
-  margin-bottom: 40px;
+  justify-content: center;
 }
 
-.contact-info p {
-  margin: 10px 0;
-  font-size: 1.2rem;
+.Contact h1 {
+  /* Style for the heading */
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #0077b6; /* Golden yellow color */
+  margin-bottom: 20px;
+  text-align: center;
+}
+.contactcont{
+  background: transparent;
+  backdrop-filter: blur(50px);
+
+  width: 92vh;
+  border: 2px solid white;
+  border-radius: 10px;
+  padding: 15px;
 }
 
+.Contact form {
+  /* Style for the form container */
+  width: 100%;
+  max-width: 600px;
+  padding: 20px;
+  border-radius: 8px;
+  background-color: #fff;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.Contact input[type="text"],
+.Contact textarea {
+  /* Style for input fields and textarea */
+  width: 95%;
+  padding: 10px ;
+ 
+  margin-bottom: 20px;
+  border: none;
+  border-bottom: 2px solid #03045e; /* Golden yellow color */
+  background-color: transparent;
+  transition: border-bottom-color 0.3s ease;
+}
+
+.Contact input[type="text"]:focus,
+.Contact textarea:focus {
+  /* Style for input fields and textarea when focused */
+  border-bottom-color: #00b4d8; /* Orange color */
+}
+
+.Contact button {
+  /* Style for the submit button */
+  background-color: #00b4d8; /* Orange color */
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.Contact button:hover {
+  /* Style for the submit button when hovered */
+  background-color: #03045e; /* OrangeRed color */
+}
+
+.Contact .text-sm {
+  /* Style for the success message */
+  font-size: 0.875rem; /* 14px */
+  font-weight: bold;
+  color: #0077b6; /* Golden yellow color */
+  margin-top: 10px;
+  text-align: center;
+}
