@@ -18,6 +18,7 @@ import ProviderLogin from "./Screens/ProviderLogin";
 import PostService from "./Screens/PostService";
 import UserInfoPage from "./Screens/UserInfoPage";
 import ProductContainer from "./Screens/ProductContainer";
+import Tp from "./Screens/Tp";
 
 const App =() =>{
 
@@ -43,6 +44,8 @@ const App =() =>{
         <Route path="/PostService"element={<PostService/>}/>
         <Route path="/UserInfoPage"element={<UserInfoPage/>}/>
         <Route path="/ProductContainer"element={<ProductContainer/>}/>
+        <Route path="/Tp"element={<Tp/>}/>
+
 
       </Routes>
     </Router>

@@ -130,6 +130,10 @@ function PostService() {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
+        if (!form.username || !form.work || !form.location || !form.phoneNo) {
+            console.error("All fields are required.");
+            return; // Exit function if any field is null
+        }
         try {
             const response = await fetch('http://localhost:8080/postService', {
                 method: 'POST',

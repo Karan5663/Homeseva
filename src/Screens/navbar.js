@@ -48,6 +48,8 @@ const Navbar = () => {
           <Link to="/Contact">Contact</Link>
           <Link to="/Login">Login</Link>
           <Link to="/ProductContainer">new</Link>
+          <Link to="/Tp">Tp</Link>
+
           
         </ul>
       </nav>
