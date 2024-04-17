@@ -10,17 +10,17 @@ function HomePainting() {
     <Layout>
       <div className='service'>
         <div className="service-container1">
-          <div className="service-card">
+          <div style={{width:100}} className="service-card">
             <Link to="/contactform">
-              <FaPaintRoller className="icon" />
-              <h3>Interior Painting</h3>
+              <FaPaintRoller style={{height:120}} className="icon" />
+              <h3 style={{fontSize:20}}>Interior Painting</h3>
             </Link>
           </div>
 
           <div className="service-card">
             <Link to="/contactform">
-              <FaPaintRoller className="icon" />
-              <h3>Exterior Painting</h3>
+              <FaPaintRoller style={{height:120}}  className="icon" />
+              <h3 style={{fontSize:20}}>Exterior Painting</h3>
             </Link>
           </div>
 
@@ -34,16 +34,18 @@ function HomePainting() {
         <div className="service-container2"> */}
           <div className="service-card">
             <Link to="/contactform">
-              <FaPaintRoller className="icon" />
-              <h3>Interior Texture</h3>
+              <FaPaintRoller style={{height:120}}  className="icon" />
+              <h3 style={{fontSize:21}}>Interior Texture</h3>
             </Link>
           </div>
           <div className="service-card">
             <Link to="/contactform">
-              <FaPaintRoller className="icon" />
-              <h3>Water Proofing</h3>
+              <FaPaintRoller style={{height:120}}  className="icon" />
+              <h3 style={{fontSize:21}}>Water Proofing</h3>
             </Link>
           </div>
+
+          
 
         </div>
       </div>

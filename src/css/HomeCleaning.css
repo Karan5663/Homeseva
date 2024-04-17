@@ -10,11 +10,12 @@
 
 .service-container1,
 .service-container2 {
-  
+ 
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   margin: 0 10px; /* Adjusts the outer margin for the container */
+  display: flex;
 }
 
 .service-card {
@@ -40,6 +41,15 @@
 
 .service-card h3 {
   margin-top: 10px;
+}
+
+.image-container {
+  width: 50%;
+}
+
+.image {
+  width: 100%;
+  height: auto;
 }
 
 /* Responsive adjustments */

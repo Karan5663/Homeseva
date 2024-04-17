@@ -37,7 +37,7 @@ function Plumbing() {
             </Link>
           </div>
 
-          <div className="service-card">
+          {/* <div className="service-card">
             <Link to="/contactform">
               <FaWrench className="icon" />
               <h3>Water Heater Repair</h3>
@@ -49,7 +49,7 @@ function Plumbing() {
               <FaWrench className="icon" />
               <h3>Toilet Installation</h3>
             </Link>
-          </div>
+          </div> */}
         </div>
       </div>
     </Layout>
