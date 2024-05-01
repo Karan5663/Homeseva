@@ -2,7 +2,7 @@
 import React, { useState, useEffect } from 'react';
 import Layout from './layout';
 
-function PostService() {
+function PostUserInfo() {
     const [form, setForm] = useState({});
     const [providers, setProviders] = useState([]);
 
@@ -15,7 +15,7 @@ function PostService() {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-        if (!form.username || !form.work || !form.location || !form.phoneNo) {
+        if (!form.username || !form.area || !form.location || !form.phoneNo) {
             console.error("All fields are required.");
             return; // Exit function if any field is null
         }
@@ -60,20 +60,22 @@ function PostService() {
                         <label htmlFor="username">Service Provider Name:</label>
                         <input type="text" onChange={hasForm} id="username" name="username" />
 
-                        <label htmlFor="work">Work:</label>
-                        <select onChange={hasForm} name="work">
+                        
+
+                        <label htmlFor="area">area:</label>
+                        <select onChange={hasForm} name="area">
                             <option value="" disabled selected>
-                                Select Work
+                                Select area
                             </option>
-                            <option value="💼 Home Cleaning" onChange={hasForm}>💼 Home Cleaning</option>
-                            <option value="Home Painting" onChange={hasForm}>💼 Home Painting</option>
-                            <option value="Plumbing" onChange={hasForm}>💼 Plumbing</option>
-                            <option value="Electrician" onChange={hasForm}>💼 Electrician</option>
-                            <option value="Pest Control" onChange={hasForm}>💼 Pest Control</option>
-                            <option value="Home Appliances" onChange={hasForm}>💼 Home Appliances</option>
-                            <option value="Moving" onChange={hasForm}>💼 Moving</option>
-                            <option value="Laundry" onChange={hasForm}>💼 Laundry</option>
-                            <option value="Gardening" onChange={hasForm}>💼 Gardening</option>
+                            <option value=" 500  sq" onChange={hasForm}> 500  sq</option>
+                            <option value=" 1000 sq" onChange={hasForm}> 1000 sq</option>
+                            <option value=" 1500 sq" onChange={hasForm}> 1500 sq</option>
+                            <option value=" 2000 sq" onChange={hasForm}> 2000 sq</option>
+                            <option value=" 2500 sq" onChange={hasForm}> 2500 sq</option>
+                            <option value=" 3000 sq" onChange={hasForm}> 3000 sq</option>
+                            <option value=" 3500 sq" onChange={hasForm}> 3500 sq</option>
+                            <option value=" 4000 sq" onChange={hasForm}> 4000 sq</option>
+                            <option value=" 5000 sq" onChange={hasForm}> 5000 sq</option>
                             {/* Other options */}
                         </select>
 
@@ -104,6 +106,24 @@ function PostService() {
                             <option value="Ichalkaranji">📍 Ichalkaranji</option>
                             {/* Other options */}
                         </select>
+                        <label htmlFor="Workarea">Workarea:</label>
+ <select onChange={hasForm} name="Workarea">
+     <option value="" disabled selected>
+         Select area
+     </option>
+     <option value=" House" onChange={hasForm}> House </option>
+     <option value=" Villa" onChange={hasForm}> Villa </option>
+     <option value=" Manson" onChange={hasForm}> Manson </option>
+     <option value=" School" onChange={hasForm}> School </option>
+     <option value=" Office" onChange={hasForm}> Office </option>
+     <option value=" Hospital" onChange={hasForm}> Hospital </option>
+     <option value=" Flats" onChange={hasForm}> Flats </option>
+     <option value=" Car" onChange={hasForm}> Car </option>
+     <option value=" Hotel" onChange={hasForm}> Hotel </option>
+     {/* Other options */}
+ </select>
+
+                        
 
                         <label htmlFor="phoneNo">Service Provider Phone No:</label>
                         <input type="number" onChange={hasForm} id="phoneNo" name="phoneNo" />
@@ -112,7 +132,7 @@ function PostService() {
                     </form>
                     <div>
                     <ul>
-                        {providers.map(provider=> <li key={provider._id}> Name: {provider.username}, Work: {provider.work}, Location: {provider.location}, Phone: {provider.phoneNo}
+                        {providers.map(provider=> <li key={provider._id}> Name: {provider.username}, area: {provider.area}, Location: {provider.location}, Phone: 
                             </li>
                         )}
                     </ul>
@@ -123,4 +143,4 @@ function PostService() {
     );
 }
 
-export default PostService;
+export default PostUserInfo;
