@@ -6,12 +6,11 @@ const mongoose = require('mongoose');
 
 const server = express();
 main().catch(err => console.log(err));
-// 
+
 async function main() {
-  await mongoose.connect('mongodb://127.0.0.1:27017/homeseva');
-  console.log('db connected');
+ await mongoose.connect('mongodb+srv://homeseva:home123@cluster0.i6tgdbe.mongodb.net/');
+  console.log('db connected');  
 }
-// 
 const userSchema = new mongoose.Schema({
     username: String,
     Email: String,
@@ -101,92 +100,3 @@ server.listen(8080,()=>{
     console.log('server started')
     // 
 })
-
-/************************************************/
-
-// 
-// const express = require('express');
-// const cors = require('cors');
-// const bodyParser = require('body-parser');
-// const mongoose = require('mongoose');
-// 
-// const app = express();
-// 
-// main().catch(err => console.log(err));
-// 
-// async function main() {
-//    await mongoose.connect('mongodb://127.0.0.1:27017/homeseva');
-//    console.log('db connected');
-// }
-// 
-// const userSchema = new mongoose.Schema({
-//    username: String,
-//    Email: String,
-//    Password: String,
-//    phone: String
-// });
-// 
-// const User = mongoose.model('User', userSchema);
-// 
-// const providerSchema = new mongoose.Schema({
-//    username: String,
-//    work: String,
-//    location: String,
-//    phoneNo: String
-// });
-// 
-// const Provider = mongoose.model('Provider', providerSchema);
-// 
-// app.use(cors());
-// app.use(bodyParser.json());
-// 
-// app.post('/demo', async (req, res) => {
-//    try {
-    //    const { username, Email, Password, phone } = req.body;
-    //    const newUser = new User({ username, Email, Password, phone });
-    //    const doc = await newUser.save();
-    //    res.status(201).json(doc);
-//    } catch (error) {
-    //    console.error(error);
-    //    res.status(500).json({ error: 'Internal server error' });
-//    }
-// });
-// 
-// app.post('/postService', async (req, res) => {
-//    try {
-    //    const { username, work, location, phoneNo } = req.body;
-    //    const newProvider = new Provider({ username, work, location, phoneNo });
-    //    const doc = await newProvider.save();
-    //    res.status(201).json(doc);
-//    } catch (error) {
-    //    console.error(error);
-    //    res.status(500).json({ error: 'Internal server error' });
-//    }
-// });
-// 
-// app.get('/demo', async (req, res) => {
-//    try {
-    //    const users = await User.find({});
-    //    res.json(users);
-//    } catch (error) {
-    //    console.error(error);
-    //    res.status(500).json({ error: 'Internal server error' });
-//    }
-// });
-// 
-// app.get('/getProviders', async (req, res) => {
-//    try {
-    //    const providers = await Provider.find({});
-    //    res.json(providers);
-//    } catch (error) {
-    //    console.error(error);
-    //    res.status(500).json({ error: 'Internal server error' });
-//    }
-// });
-// 
-// const PORT = process.env.PORT || 8080;
-// app.listen(PORT, () => {
-//    console.log('Server started on port ${PORT}');
-// });
-// 
-// 
