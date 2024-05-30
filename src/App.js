@@ -19,6 +19,7 @@ import PostService from "./Screens/PostService";
 import UserInfoPage from "./Screens/UserInfoPage";
 import ProductContainer from "./Screens/ProductContainer";
 import Tp from "./Screens/Tp";
+import Gotopage from "./Screens/Gotopage";
 
 const App =() =>{
 
@@ -45,6 +46,8 @@ const App =() =>{
         <Route path="/UserInfoPage"element={<UserInfoPage/>}/>
         <Route path="/ProductContainer"element={<ProductContainer/>}/>
         <Route path="/Tp"element={<Tp/>}/>
+        <Route path="/Gotopage"element={<Gotopage/>}/>
+
 
 
       </Routes>

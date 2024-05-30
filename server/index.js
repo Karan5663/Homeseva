@@ -29,6 +29,18 @@ const providerSchema = new mongoose.Schema({
 // 
 const Provider = mongoose.model('Provider', providerSchema);
 // 
+const providerinfoSchema = new mongoose.Schema({
+    Providername: String,
+    Provideraddress: String,
+    Providercontact: String,
+    Provideremail: String,
+    Providercpass: String,
+    Plocation: String
+
+});
+// 
+const Provideri = mongoose.model('Provideri', providerinfoSchema);
+// 
 // 
 server.use(cors());
 server.use(bodyparser.json());
@@ -52,7 +64,7 @@ server.post('/demo',async(req,res)=>{
     res.json({ error: 'Internal server error' });
 }
 });
-// 
+// //
 server.post('/postService',async(req,res)=>{
     try{
        let provider = new Provider();
@@ -70,9 +82,27 @@ server.post('/postService',async(req,res)=>{
        res.json({ error: 'Internal server error' });
    }
    });
+// // 
+server.post('/PostproInfo',async(req,res)=>{
+    try{
+       let provideri = new Provideri();
+       provideri.Providername = req.body.Providername;
+       provideri.Provideraddress = req.body.Provideraddress;
+       provideri.Providercontact = req.body.Providercontact;
+       provideri.Provideremail = req.body.Provideremail;
+       provideri.Providercpass = req.body.Providercpass;
+       provideri.Plocation = req.body.Plocation;
+     const doc = await provideri.save();
+    
 //    
-
-// 
+       console.log(doc);
+       res.json(doc);
+   } catch (error) {
+       console.error(error);
+       res.json({ error: 'Internal server error' });
+   }
+   });
+// // //
 server.get('/demo',async(req,res)=>{
     try{
   const docs = await User.find({});
@@ -93,8 +123,16 @@ server.get('/getProviders', async (req, res) => {
         res.json({ error: 'Internal server error' });
     }
 });
-
-
+//
+server.get('/getproInfo', async (req, res) => {
+    try {
+        const proi = await Provideri.find({});
+        res.json(proi);
+    } catch (error) {
+        console.error(error);
+        res.json({ error: 'Internal server error' });
+    }
+});
 // 
 server.listen(8080,()=>{
     console.log('server started')
