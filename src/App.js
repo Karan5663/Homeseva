@@ -20,6 +20,7 @@ import UserInfoPage from "./Screens/UserInfoPage";
 import ProductContainer from "./Screens/ProductContainer";
 import Tp from "./Screens/Tp";
 import Gotopage from "./Screens/Gotopage";
+import Otherservices from "./Screens/otherservice";
 
 const App =() =>{
 
@@ -47,8 +48,8 @@ const App =() =>{
         <Route path="/ProductContainer"element={<ProductContainer/>}/>
         <Route path="/Tp"element={<Tp/>}/>
         <Route path="/Gotopage"element={<Gotopage/>}/>
-
-
+        {/* <Route path="/otherservice"element={<Otherservices/>}/> */}
+        <Route path="/otherservice"element={<Otherservices/>}/>
 
       </Routes>
     </Router>

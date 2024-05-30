@@ -44,20 +44,11 @@ function Ourservices() {
       </div>
 
       <div className="services-container3">
-        <Link to="/Moving" className="service-card">
+        <Link to="/otherservice" className="service-card">
           <FaTruckMoving className="icon" />
-          <h3>Moving</h3>
+          <h3>Other services</h3>
         </Link>
-
-        <Link to="/Laundry" className="service-card">
-          <FaTshirt className="icon" />
-          <h3>Laundry</h3>
-        </Link>
-
-        <Link to="/Gardening" className="service-card">
-          <FaLeaf className="icon" />
-          <h3>Gardening</h3>
-        </Link>
+       
       </div>
       </div>
     </Layout>
