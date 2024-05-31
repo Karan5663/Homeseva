@@ -21,11 +21,15 @@ import ProductContainer from "./Screens/ProductContainer";
 import Tp from "./Screens/Tp";
 import Gotopage from "./Screens/Gotopage";
 import Otherservices from "./Screens/otherservice";
+import AppContext from "./config/Context";
 
 const App =() =>{
 
   return(
     <Router>
+      <AppContext>
+        
+      
       <Routes>
         <Route path="/" element={<Home/>}/>
         <Route path="/Home" element={<Home/>}/>
@@ -52,6 +56,7 @@ const App =() =>{
         <Route path="/otherservice"element={<Otherservices/>}/>
 
       </Routes>
+      </AppContext>
     </Router>
   );
 };
