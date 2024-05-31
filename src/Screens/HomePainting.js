@@ -49,6 +49,7 @@ import { FaPaintRoller } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 import Layout from './layout';
 import '../css/HomePainting.css';
+import imageSrc from '../Img/HomePainting.webp';
 
 function HomePainting() {
   const services = [
@@ -72,6 +73,16 @@ function HomePainting() {
           ))}
         </div>
       </div>
+
+      <div className='image-container'>
+          <img
+            style={{ width: 900, marginLeft: 500, marginTop: -1500, marginBottom: 120 }}
+            src={imageSrc}
+            alt="Cleaning Services"
+            className='image'
+          />
+        </div>
+     
     </Layout>
   );
 }

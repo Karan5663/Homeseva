@@ -2,6 +2,7 @@ import React from 'react';
 import { FaBolt } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 import Layout from './layout'; 
+import imageSrc from '../Img/Electrician.webp';
 
 function Electrician() {
   const services = [
@@ -25,6 +26,16 @@ function Electrician() {
           ))}
         </div>
       </div>
+
+      <div className='image-container'>
+          <img
+            style={{ width: 900, marginLeft: 500, marginTop: -1500, marginBottom: 120 }}
+            src={imageSrc}
+            alt="Cleaning Services"
+            className='image'
+          />
+        </div>
+
     </Layout>
   );
 }
