@@ -22,7 +22,7 @@ import Tp from "./Screens/Tp";
 import Gotopage from "./Screens/Gotopage";
 import Otherservices from "./Screens/otherservice";
 import AppContext from "./config/Context";
-
+import Provuser from "./Screens/provuser";
 const App =() =>{
 
   return(
@@ -54,6 +54,7 @@ const App =() =>{
         <Route path="/Gotopage"element={<Gotopage/>}/>
         {/* <Route path="/otherservice"element={<Otherservices/>}/> */}
         <Route path="/otherservice"element={<Otherservices/>}/>
+        <Route path="/provuser"element={<Provuser/>}/>
 
       </Routes>
       </AppContext>

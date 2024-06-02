@@ -20,6 +20,17 @@ const userSchema = new mongoose.Schema({
 
   const User = mongoose.model('User', userSchema);
 
+  const UserContactSchema = new mongoose.Schema({
+    contusername: String,
+    address: String,
+    phoneNo: String,
+    contEmail: String,
+    service: String,
+    location: String,
+  });
+
+  const UserContact = mongoose.model('UserContact', UserContactSchema);
+
 const providerSchema = new mongoose.Schema({
     username: String,
     work: String,
@@ -71,6 +82,27 @@ server.post('/demo',async(req,res)=>{
 
 server.post('/postService',async(req,res)=>{
     try{
+       let usercontact = new UserContact();
+       usercontact.contusername = req.body.name;
+       usercontact.address = req.body.address;
+       usercontact.phoneNo = req.body.phoneNumber;
+       usercontact.contEmail=req.body.email;
+       usercontact.service = req.body.service;
+       usercontact.location = req.body.location;
+      
+     const doc = await usercontact.save();
+    
+     
+       console.log(doc);
+       res.json({ success: true, message: 'Provider info saved successfully' });
+       
+   } catch (error) {
+       console.error(error);
+       res.json({ error: 'Internal server error' });
+   }
+   });
+   server.post('/postcontact',async(req,res)=>{
+    try{
        let provider = new Provider();
        provider.username = req.body.username;
        provider.work = req.body.work;
@@ -121,6 +153,15 @@ server.get('/demo',async(req,res)=>{
 }
 
 });
+server.get('/getusercontact', async (req, res) => {
+  try {
+      const usercontact = await usercontact.find({});
+      res.json(usercontact);
+  } catch (error) {
+      console.error(error);
+      res.json({ error: 'Internal server error' });
+  }
+});
 
 server.get('/getProviders', async (req, res) => {
     try {
@@ -133,13 +174,20 @@ server.get('/getProviders', async (req, res) => {
 });
 
 server.get('/getproInfo', async (req, res) => {
-    try {
-        const proi = await Provideri.find({});
-        res.json(proi);
-    } catch (error) {
-        console.error(error);
-        res.json({ error: 'Internal server error' });
-    }
+  try {
+      const { location, service } = req.query;
+      let query = {};
+
+      if (location && service) {
+          query = { location, service };
+      }
+      const providers = await Provideri.find(query);
+
+      res.json(providers);
+  } catch (error) {
+      console.error(error);
+      res.status(500).json({ error: 'Internal server error' });
+  }
 });
 
 
@@ -163,7 +211,17 @@ server.post('/login', async (req, res) => {
     }
   });
   
+  server.get('/providers', (req, res) => {
+    const { service, location } = req.query;
+  
+    const filteredProviders = providers.filter(provider =>
+      provider.work === service && provider.location === location
+    );
+  console.log('got it');
+    res.json({ providers: filteredProviders });
 
+  });
+  
 
 
 
