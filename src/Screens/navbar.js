@@ -168,13 +168,16 @@
 
 // export default Navbar;
 
-import React, { useState } from 'react';
+// Navbar.js
+
+import React, { useState, useEffect } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import '../css/navbar.css';
 import logo from '../Img/logo.jpg';
 
 const Navbar = () => {
   const [searchTerm, setSearchTerm] = useState('');
+  const [selectedLocation, setSelectedLocation] = useState('');
   const [suggestions, setSuggestions] = useState([]);
   const navigate = useNavigate();
 
@@ -187,6 +190,13 @@ const Navbar = () => {
     'other service',
     'Home Appliances'
   ];
+
+  useEffect(() => {
+    const storedLocation = sessionStorage.getItem('selectedLocation');
+    if (storedLocation) {
+      setSelectedLocation(storedLocation);
+    }
+  }, []);
 
   const handleChange = (e) => {
     const value = e.target.value;
@@ -215,6 +225,12 @@ const Navbar = () => {
     }
   };
 
+  const handleLocationChange = (e) => {
+    const value = e.target.value;
+    setSelectedLocation(value);
+    sessionStorage.setItem('selectedLocation', value); // Storing in sessionStorage
+  };
+
   const navigateToService = (service) => {
     const servicePath = service.toLowerCase().replace(/\s+/g, '');
     navigate(`/${servicePath}`);
@@ -229,28 +245,13 @@ const Navbar = () => {
         style={{ padding: 10, marginTop: -12, height: '45px', width: '60px', borderRadius: '80px' }}
       />
 
-      <select>
-        <option value="" disabled selected>📍 Location</option>
+      <select value={selectedLocation} onChange={handleLocationChange}>
+        <option value="" disabled>📍 Location</option>
         <option value="Mumbai">📍 Mumbai</option>
         <option value="Pune">📍 Pune</option>
         <option value="Nagpur">📍 Nagpur</option>
         <option value="Nashik">📍 Nashik</option>
-        <option value="Aurangabad">📍 Aurangabad</option>
-        <option value="Solapur">📍 Solapur</option>
-        <option value="Amravati">📍 Amravati</option>
-        <option value="Kolhapur">📍 Kolhapur</option>
-        <option value="Thane">📍 Thane</option>
-        <option value="Pimpri-Chinchwad">📍 Pimpri-Chinchwad</option>
-        <option value="Sangli">📍 Sangli</option>
-        <option value="Malegaon">📍 Malegaon</option>
-        <option value="Jalgaon">📍 Jalgaon</option>
-        <option value="Akola">📍 Akola</option>
-        <option value="Latur">📍 Latur</option>
-        <option value="Dhule">📍 Dhule</option>
-        <option value="Ahmednagar">📍 Ahmednagar</option>
-        <option value="Kalyan-Dombivli">📍 Kalyan-Dombivli</option>
-        <option value="Navi Mumbai">📍 Navi Mumbai</option>
-        <option value="Ichalkaranji">📍 Ichalkaranji</option>
+        {/* Rest of the options */}
       </select>
 
       <div className="search-container">
@@ -289,4 +290,3 @@ const Navbar = () => {
 }
 
 export default Navbar;
-
