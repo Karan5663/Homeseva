@@ -211,16 +211,27 @@ server.post('/login', async (req, res) => {
     }
   });
   
-  server.get('/providers', (req, res) => {
-    const { service, location } = req.query;
-  
-    const filteredProviders = providers.filter(provider =>
-      provider.work === service && provider.location === location
-    );
-  console.log('got it');
-    res.json({ providers: filteredProviders });
 
+
+//Add this route for handling provider login requests
+  server.post('/prologin', async (req, res) => {
+    try {
+      const { Providername, Providercpass } = req.body;
+      const user = await Provideri.findOne({ Providername, Providercpass:Providercpass });
+  
+      if (user) {
+      // Authentication successful
+        res.status(200).json({ message: 'Login successful', data: user });
+      } else {
+       //Authentication failed
+        res.status(401).json({ message: 'Invalid username or password' });
+      }
+    } catch (error) {
+      console.error('Login Error:', error);
+      res.status(500).json({ error: 'Internal server error' });
+    }
   });
+  
   
 
 

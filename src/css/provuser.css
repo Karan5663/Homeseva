@@ -25,4 +25,9 @@
     margin: 5px 0;
     color: #666; /* Change the color to match your design */
   }
-  
+  .image {
+    width: 10%;
+    height: 10px;
+    border-radius: 100px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }

@@ -25,11 +25,19 @@ const Provuser = () => {
       console.error('Error fetching providers:', error);
     }
   };
+  
   const handleButtonClick = (providerId) => {
     // Define your logic to handle button click here
     console.log(`Contacting provider with ID: ${providerId}`);
   };
-
+  
+  
+    const imageStyles = {
+      width: '100%',
+      height: 'auto',
+      borderRadius: '10px',
+      boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)',
+    };
   return (
     <Layout>
       <div className="provider-services">
@@ -44,7 +52,7 @@ const Provuser = () => {
                 <p>Location: {provider.Plocation}</p>
                 <p>Phone Number: {provider.Providercontact}</p>
                 <p>Details:{provider.Details}</p>
-                <p>image:{provider.image}</p>
+                <pa>image: <img src={provider.image} style={imageStyles}/></pa> 
                 <button onClick={() => handleButtonClick(provider.id)}>Contact</button>
               </div>
             ))
