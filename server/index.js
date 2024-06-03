@@ -192,6 +192,26 @@ server.get('/getproInfo', async (req, res) => {
 
 
 
+server.get('/getservinfo', async (req, res) => {
+  try {
+    const { Providername, Provideremail, Providercpass } = req.query;
+    console.log('Received query parameters:', { Providername, Provideremail, Providercpass }); // Log query parameters
+
+    let query = {};
+    if (Providername && Provideremail && Providercpass) {
+      query = { Providername, Provideremail, Providercpass };
+    }
+
+    const providers = await Provideri.find(query);
+    console.log('Queried providers:', providers); // Log the providers
+
+    res.json(providers);
+  } catch (error) {
+    console.error(error);
+    res.status(500).json({ error: 'Internal server error' });
+  }
+});
+
 //Add this route for handling login requests
 server.post('/login', async (req, res) => {
     try {

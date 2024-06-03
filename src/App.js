@@ -23,6 +23,8 @@ import Gotopage from "./Screens/Gotopage";
 import Otherservices from "./Screens/otherservice";
 import AppContext from "./config/Context";
 import Provuser from "./Screens/provuser";
+import ProviderDetails from "./Screens/ProviderDetails";
+
 const App =() =>{
 
   return(
@@ -55,6 +57,9 @@ const App =() =>{
         {/* <Route path="/otherservice"element={<Otherservices/>}/> */}
         <Route path="/otherservice"element={<Otherservices/>}/>
         <Route path="/provuser"element={<Provuser/>}/>
+
+        <Route path="/ProviderDetails"element={<ProviderDetails/>}/>
+        
 
       </Routes>
       </AppContext>

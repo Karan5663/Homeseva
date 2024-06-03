@@ -27,7 +27,7 @@ const Provuser = () => {
   };
   
   const handleButtonClick = (providerId) => {
-    // Define your logic to handle button click here
+    //  Define your logic to handle button click here
     console.log(`Contacting provider with ID: ${providerId}`);
   };
   
@@ -40,29 +40,30 @@ const Provuser = () => {
     };
   return (
     <Layout>
-      <div className="provider-services">
-        <h2>Provider Services</h2>
-        <div className="cards">
-          {providers.length > 0 ? (
+       <div className="provider-services">
+         <h2>Provider Services</h2>
+         <div className="cards">
+           {providers.length > 0 ? (
             providers.map((provider, index) => (
               <div key={index} className="card">
-                <h3>Name: {provider.Providername}</h3>
-                <p>Email:{provider.Provideremail}</p>
-                <p>Service: {provider.work}</p>
-                <p>Location: {provider.Plocation}</p>
-                <p>Phone Number: {provider.Providercontact}</p>
-                <p>Details:{provider.Details}</p>
-                <pa>image: <img src={provider.image} style={imageStyles}/></pa> 
-                <button onClick={() => handleButtonClick(provider.id)}>Contact</button>
-              </div>
+                 <h3>Name: {provider.Providername}</h3>
+                 <p>Email:{provider.Provideremail}</p>
+                 <p>Service: {provider.work}</p>
+                 <p>Location: {provider.Plocation}</p>
+                 <p>Phone Number: {provider.Providercontact}</p>
+                 <p>Details:{provider.Details}</p>
+                 <pa>image: <img src={provider.image} style={imageStyles}/></pa> 
+                 <button onClick={() => handleButtonClick(provider.id)}>Contact</button>
+               </div>
             ))
           ) : (
             <p>No providers found for the selected criteria.</p>
           )}
-        </div>
-      </div>
+         </div>
+       </div>
     </Layout>
   );
 };
 
 export default Provuser;
+// 
