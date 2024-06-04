@@ -277,10 +277,12 @@ function Login() {
         navigate('/Ourservices');
       }).catch(err => {
         console.log(err);
+        setLoginError('Invalid username or password');
       });
     } catch (error) {
       console.error('Login Error:', error);
       setLoginError('Error during login. Please try again.');
+      
     }
   };
 

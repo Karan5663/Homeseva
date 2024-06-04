@@ -265,12 +265,12 @@ function ProviderLogin() {
     <Layout>
       <div className='providerc'>
         <div className="provider">
-          <h2>Login to HomeSeva</h2>
+          <h2 style={{color:'white'}}>Login to HomeSeva</h2>
           <form onSubmit={handleLogin}>
-            <label htmlFor="Providername">Username:</label>
+            <label  style={{color:'white'}} htmlFor="Providername">Username:</label>
             <input type="text" id="Providername" name="Providername" value={loginData.Providername} onChange={handleInputChange} />
 
-            <label htmlFor="Providercpass">Password:</label>
+            <label  style={{color:'white'}} htmlFor="Providercpass">Password:</label>
             <input type="password" id="Providercpass" name="Providercpass" value={loginData.Providercpass} onChange={handleInputChange} />
 
             <button type="submit" style={{ color: 'black' }}>
@@ -280,7 +280,7 @@ function ProviderLogin() {
           
             <nav style={{ marginTop: 30 }}>
               <ul>
-                <Link to="/Serviceprovider" style={{ marginLeft: 30 }}>---Or Register as Service Provider---</Link>
+                <Link to="/Serviceprovider" style={{ marginLeft: 90 }}>---Or Register as Service Provider---</Link>
               </ul>
             </nav>
           </form>

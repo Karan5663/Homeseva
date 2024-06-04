@@ -1,7 +1,7 @@
 import React, { useContext, useEffect, useState } from 'react';
 import Layout from './layout';
 import { Context1 } from '../config/Context1';
-import { useNavigate } from 'react-router-dom';
+import {Link, useNavigate } from 'react-router-dom';
 import '../css/provuser.css';
 
 function ProviderDetails() {
@@ -54,6 +54,10 @@ function ProviderDetails() {
     localStorage.setItem('providerService', work);
     navigate('/clients');
   };
+  const handleClientsButtonClick1 = () => {
+
+    navigate('/ProductContainer');
+  }
 
   return (
     <Layout>
@@ -104,6 +108,8 @@ function ProviderDetails() {
         <button style={{ marginTop: '20px', color: 'black' }} onClick={handleClientsButtonClick}>
           Clients
         </button>
+        <button style={{ marginTop: '20px',marginLeft:'20px', color: 'black' }}  onClick={handleClientsButtonClick1}>All Service Provider</button>
+
       </div>
     </Layout>
   );

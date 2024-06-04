@@ -113,6 +113,8 @@ server.post('/postService',async(req,res)=>{
        res.json({ error: 'Internal server error' });
    }
    });
+
+   
    server.post('/postcontact',async(req,res)=>{
     try{
        let provider = new Provider();
@@ -207,12 +209,12 @@ server.get('/getproInfo', async (req, res) => {
 
 server.get('/getservinfo', async (req, res) => {
   try {
-    const { Providername, Provideremail, Providercpass } = req.query;
-    console.log('Received query parameters:', { Providername, Provideremail, Providercpass }); // Log query parameters
+    const { Providername, Provideremail, Providercpass,Plocation,work ,image} = req.query;
+    console.log('Received query parameters:', { Providername, Provideremail, Providercpass,Plocation,work ,image}); // Log query parameters
 
     let query = {};
-    if (Providername && Provideremail && Providercpass) {
-      query = { Providername, Provideremail, Providercpass };
+    if (Providername && Provideremail && Providercpass && Plocation && work && image) {
+      query = { Providername, Provideremail, Providercpass,Plocation ,work ,image};
     }
 
     const providers = await Provideri.find(query);

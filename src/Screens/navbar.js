@@ -279,10 +279,9 @@ const Navbar = () => {
           <Link to="/Home">Home</Link>
           <Link to="/aboutus">About us</Link>
           <Link to="/Ourservices">Our service</Link>
-          <Link to="/Contact">Contact</Link>
+          <Link to="/Contact">Contact us</Link>
           <Link to="/Login">Login</Link>
-          <Link to="/ProductContainer">new</Link>
-          <Link to="/Tp">Tp</Link>
+          
         </ul>
       </nav>
     </div>

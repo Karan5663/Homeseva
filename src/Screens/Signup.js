@@ -153,12 +153,6 @@ function Signup() {
 
             <button type="submit" style={{ color: 'black' }}>Signup</button>
           </form>
-          <div>
-            <ul>
-              {/* {users.map(user=> <li key={user._id}>{user.username},{user.Email}</li>)} */}
-              <Link to="/user-info">View All Users</Link>
-            </ul>
-          </div>
         </div>
       </div>
     </Layout>

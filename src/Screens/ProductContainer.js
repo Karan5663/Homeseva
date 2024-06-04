@@ -38,7 +38,7 @@ const ProductContainer = () => {
   // Fetch data from the backend
   const getProviders = async () => {
     try {
-      const response = await fetch('http://localhost:8080/getProviders');
+      const response = await fetch('http://localhost:8080/getservinfo');
       const data = await response.json();
       setProviders(data);
     } catch (error) {
@@ -49,6 +49,12 @@ const ProductContainer = () => {
   useEffect(() => {
     getProviders();
   }, []);
+  const imageStyles = {
+    width: '100%',
+    height: 'auto',
+    borderRadius: '10px',
+    boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)',
+  };
 
   return (
     <div className="main-app">
@@ -59,14 +65,18 @@ const ProductContainer = () => {
       <div className="product-container">
         {providers.map((provider, index) => (
           <div className="product" key={index}>
-            <h3>{provider.username}</h3>
-            <p>{provider.work}</p>
-            <p>Location: {provider.location}</p>
-            <p>Phone No: {provider.phoneNo}</p>
-            <div className="additional-container">
+            <h3>Name:{provider.Providername}</h3>
+            <p>Email:{provider.Provideremail}</p>
+            <p>Location: {provider.Plocation}</p>
+            <p>Work: {provider.work}</p>
+            <p>Image: <img src={provider.image} style={imageStyles} alt="Provider" /></p>
+
+
+            
+            {/* <div className="additional-container"> */}
               {/* <img src={provider.imageURL} alt="Additional Image" /> */}
-              <img src= {my} alt="my" />  
-            </div>
+              {/* <img src= {my} alt="my" />   */}
+            {/* </div> */}
           </div>
         ))}
       </div>

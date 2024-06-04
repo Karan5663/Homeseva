@@ -28,7 +28,7 @@ function PestControl() {
       </div>
       <div className='image-container'>
           <img
-            style={{ width: 900,height:600, marginLeft: 500, marginTop: -1500, marginBottom: 120 }}
+            style={{ width: 900,height:600, marginLeft: 530, marginTop: -1500, marginBottom: 120 }}
             src={imageSrc}
             alt="Cleaning Services"
             className='image'

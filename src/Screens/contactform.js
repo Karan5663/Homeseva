@@ -407,7 +407,7 @@ const Contactform = () => {
       <div className="continfo">
         <div className="contc">
           <form onSubmit={handleSubmit}>
-            <h2>Contact Information</h2>
+            <h2 style={{marginTop:-10}}>Contact Information</h2>
             <label htmlFor="name">Name:</label>
             <input
               type="text"
