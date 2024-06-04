@@ -1,0 +1,32 @@
+.user-services {
+    padding: 20px;
+  }
+  
+  .user-services h2 {
+    margin-bottom: 20px;
+  }
+  
+  .error-message {
+    color: red;
+    font-weight: bold;
+  }
+  
+  .services-list {
+    margin-top: 20px;
+  }
+  
+  .service-card {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 10px;
+  }
+  
+  .service-card h3 {
+    margin-bottom: 5px;
+  }
+  
+  .service-card p {
+    margin: 5px 0;
+  }
+  

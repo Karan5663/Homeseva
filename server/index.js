@@ -2,8 +2,7 @@ const express = require('express');
 const cors = require('cors');
 const bodyparser = require('body-parser');
 const mongoose = require('mongoose');
-
-
+const ProviderStatus = require('../src/Screens/ProviderStatus');
 const server = express();
 main().catch(err => console.log(err));
 
@@ -27,10 +26,21 @@ const userSchema = new mongoose.Schema({
     contEmail: String,
     service: String,
     location: String,
-  });
+    providerName: String,
+    status: { type: String, default: 'pending' },
+});
+
+  
 
   const UserContact = mongoose.model('UserContact', UserContactSchema);
 
+  const ProStatusSchema = new mongoose.Schema({
+    status: String,
+    providerName: String,
+  });
+  const ProStatus = mongoose.model('ProviderStatus', ProStatusSchema);
+
+  
 const providerSchema = new mongoose.Schema({
     username: String,
     work: String,
@@ -82,13 +92,15 @@ server.post('/demo',async(req,res)=>{
 
 server.post('/postService',async(req,res)=>{
     try{
-       let usercontact = new UserContact();
-       usercontact.contusername = req.body.name;
-       usercontact.address = req.body.address;
-       usercontact.phoneNo = req.body.phoneNumber;
-       usercontact.contEmail=req.body.email;
-       usercontact.service = req.body.service;
-       usercontact.location = req.body.location;
+      let usercontact = new UserContact();
+
+      usercontact.contusername = req.body.name;
+      usercontact.address = req.body.address;
+      usercontact.phoneNo = req.body.phoneNumber;
+      usercontact.contEmail=req.body.email;
+      usercontact.service = req.body.service;
+      usercontact.location = req.body.location;
+      usercontact.status = 'Pending'; 
       
      const doc = await usercontact.save();
     
@@ -118,6 +130,7 @@ server.post('/postService',async(req,res)=>{
        res.json({ error: 'Internal server error' });
    }
    });
+
 
 server.post('/PostproInfo',async(req,res)=>{
     try{
@@ -155,7 +168,7 @@ server.get('/demo',async(req,res)=>{
 });
 server.get('/getusercontact', async (req, res) => {
   try {
-      const usercontact = await usercontact.find({});
+      const usercontact = await UserContact.find({});
       res.json(usercontact);
   } catch (error) {
       console.error(error);
@@ -212,6 +225,7 @@ server.get('/getservinfo', async (req, res) => {
   }
 });
 
+
 //Add this route for handling login requests
 server.post('/login', async (req, res) => {
     try {
@@ -252,11 +266,72 @@ server.post('/login', async (req, res) => {
     }
   });
   
-  
+  server.put('/updateUserContactStatus', async (req, res) => {
+    try {
+        const { providerName, providerStatus, deleteUserContact } = req.body;
+        console.log('Received request body:', req.body);
 
+        if (deleteUserContact && providerStatus === 'Completed') {
+            console.log('Deleting user contact for provider:', providerName);
+            const deletedContact = await UserContact.deleteOne({ providerName });
+            if (deletedContact.deletedCount > 0) {
+                console.log('User contact deleted successfully');
+                res.json({ success: true, message: 'User contact deleted successfully' });
+            } else {
+                console.log('User contact not found');
+                res.status(404).json({ success: false, message: 'User contact not found' });
+            }
+        } else {
+            console.log('Updating provider status:', providerName, providerStatus);
+            
+            // Update the provider status in ProStatus collection
+            const provider = await ProStatus.findOneAndUpdate(
+                { providerName },
+                { status: providerStatus },
+                { new: true, upsert: true }
+            );
 
+            if (provider) {
+                // Update UserContact with the selected provider name
+                const userContactUpdate = await UserContact.findOneAndUpdate(
+                    { providerName },
+                    { status: providerStatus, providerName },
+                    { new: true }
+                );
 
+                if (userContactUpdate) {
+                    console.log('User contact updated:', userContactUpdate);
+                    res.json({ success: true, provider, userContactUpdate });
+                } else {
+                    console.log('User contact not found for updating provider name');
+                    res.status(404).json({ success: false, message: 'User contact not found for updating provider name' });
+                }
+            } else {
+                console.log('Provider status not found');
+                res.status(404).json({ success: false, message: 'Provider status not found' });
+            }
+        }
+    } catch (error) {
+        console.error('Error:', error);
+        res.status(500).json({ error: 'Internal server error' });
+    }
+});
 
+server.post('/getusercontact1', async (req, res) => {
+  const { username, status } = req.body;
+
+  try {
+    const services = await UserContact.find({ contusername: username, status: status });
+
+    if (services.length > 0) {
+      res.json({ success: true, services });
+    } else {
+      res.json({ success: false, message: 'No services found' });
+    }
+  } catch (error) {
+    res.json({ success: false, message: 'Error fetching services' });
+  }
+});
 
 
 

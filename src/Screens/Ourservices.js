@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { FaHome, FaPaintRoller, FaWrench, FaBolt, FaBug, FaCogs, FaTruckMoving, FaTshirt, FaLeaf } from 'react-icons/fa';
+import { FaHome, FaPaintRoller,FaUser, FaWrench, FaBolt, FaBug, FaCogs, FaTruckMoving, FaTshirt, FaLeaf } from 'react-icons/fa';
 import '../css/Services.css';
 import Layout from './layout';
 import { Link } from 'react-router-dom';
@@ -47,6 +47,11 @@ function Ourservices() {
         <Link to="/otherservice" className="service-card">
           <FaTruckMoving className="icon" />
           <h3>Other services</h3>
+        </Link>
+       
+        <Link to="/userServices" className="service-card">
+          <FaUser className="icon" />
+          <h3>user services</h3>
         </Link>
        
       </div>
