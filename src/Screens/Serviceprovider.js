@@ -462,10 +462,9 @@ function Serviceprovider() {
 
                         {errorMessage && <p style={{ color: 'red' }}>{errorMessage}</p>}
                         <div style={{ paddingTop: -10,  marginBottom:10}}>
-                            {/* <div onClick={upload} style={{ color: 'black', width: 429, backgroundColor: "rebeccapurple" }}>Submit</div> */}
-                            <button onClick={upload} type="submit" style={{ color: 'black' ,width:'100%' }}>
-                            Submit
-                            </button>
+                           
+                            
+                            <div onClick={upload} style={{ marginLeft:-12, color: 'black', width: '100%', backgroundColor: "#ff8200", padding:10 , textAlign:'center'}}>Submit</div>
                         </div>
                     </form>
                 </div>
