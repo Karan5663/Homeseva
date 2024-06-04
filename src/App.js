@@ -158,7 +158,7 @@ import Provuser from './Screens/provuser';
 import ProviderDetails from './Screens/ProviderDetails';
 import Clients from './Screens/Clients';
 import { ContextProvider } from './config/Context1';
-import UserContact from './Screens/userServices'
+
 const App = () => {
   return (
     <Router>
@@ -188,7 +188,6 @@ const App = () => {
           <Route path="/provuser" element={<Provuser />} />
           <Route path="/providerdetails" element={<ProviderDetails />} />
           <Route path="/Clients" element={<Clients />} />
-          <Route path="/userServices" element={<UserContact />} />
         </Routes>
       </ContextProvider>
     </Router>

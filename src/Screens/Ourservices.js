@@ -49,10 +49,7 @@ function Ourservices() {
           <h3>Other services</h3>
         </Link>
        
-        <Link to="/userServices" className="service-card">
-          <FaUser className="icon" />
-          <h3>user services</h3>
-        </Link>
+        
        
       </div>
       </div>
