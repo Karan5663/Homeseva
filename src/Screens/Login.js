@@ -322,18 +322,18 @@ function Login() {
             </button>
             {loginError && <p style={{ color: 'red' }}>{loginError}</p>}
             <nav style={{ marginTop: 30 }}>
-              <ul>
-                <Link to="/Signup" style={{ marginLeft: 120 }}>
+              <ul >
+                <Link to="/Signup" style={{ marginLeft: 135 }}>
                   --------Or Sign up--------
                 </Link>
               </ul>
-              <ul>
-                <Link to="/Serviceprovider" style={{ marginLeft: 80 }}>
+              <ul style={{marginTop:3}}>
+                <Link to="/Serviceprovider" style={{ marginLeft:100  }}>
                   ---Or Register as Service Provider---
                 </Link>
               </ul>
-              <ul>
-                <Link to="/ProviderLogin" style={{ marginLeft: 90 }}>
+              <ul style={{marginTop:3}}>
+                <Link to="/ProviderLogin" style={{ marginLeft: 110 }}>
                   ---Or Login as Service provider ---
                 </Link>
               </ul>
