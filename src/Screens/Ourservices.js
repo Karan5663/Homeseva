@@ -48,9 +48,6 @@ function Ourservices() {
           <FaTruckMoving className="icon" />
           <h3>Other services</h3>
         </Link>
-       
-        
-       
       </div>
       </div>
     </Layout>

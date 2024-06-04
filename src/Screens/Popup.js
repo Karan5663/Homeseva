@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { View, Text, Modal, Button } from 'react-native';
-import styles from './Popup.css'; // Import styles from CSS file
+import styles from './Popup.css'; 
 
 const Popup = () => {
   const [modalVisible, setModalVisible] = useState(false);

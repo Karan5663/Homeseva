@@ -16,7 +16,6 @@ function Clients() {
       fetchUserContacts(service, location);
     }
   }, []);
-// Inside the useEffect hook for fetching user contacts
 useEffect(() => {
     const fetchUserContacts = async () => {
         try {
@@ -25,7 +24,7 @@ useEffect(() => {
                 const data = await response.json();
                 setUserContacts(data);
 
-                // Determine which radio buttons should be disabled based on the status
+             
                 const updatedUserContacts = data.map(contact => ({
                     ...contact,
                     userAcceptDisabled: contact.status === 'UserAccepted',

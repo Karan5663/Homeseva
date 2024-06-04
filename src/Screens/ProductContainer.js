@@ -1,41 +1,9 @@
-//import React from 'react';
-//import '../css/ProductContainer.css'; // Import CSS file
-//const ProductContainer = () => {
-//  // Sample array of products
-//  const products = [
-//    { name: 'Product 1', description: 'Description of Product 1', price: '$10' },
-//    { name: 'Product 2', description: 'Description of Product 2', price: '$20' },
-//    // Add more products as needed
-//  ];
-//  return (
-//    <div className="main-app">
-//      <h1>Products</h1>
-//      <div className="product-container">
-//        {products.map((product, index) => (
-//          <div className="product" key={index}>
-//            <h3>{product.name}</h3>
-//            <p>{product.description}</p>
-//            <p>Price: {product.price}</p>
-//            {/* Add more product details as needed */}
-//          </div>
-//        ))}
-//      </div>
-//    </div>
-//  );
-//};
-//export default ProductContainer;
-
-
-
 import React, { useState, useEffect } from 'react';
-import my from "../Img/new.jpg";
-
 import '../css/ProductContainer.css';
 
 const ProductContainer = () => {
   const [providers, setProviders] = useState([]);
 
-  // Fetch data from the backend
   const getProviders = async () => {
     try {
       const response = await fetch('http://localhost:8080/getservinfo');
@@ -70,13 +38,6 @@ const ProductContainer = () => {
             <p>Location: {provider.Plocation}</p>
             <p>Work: {provider.work}</p>
             <p>Image: <img src={provider.image} style={imageStyles} alt="Provider" /></p>
-
-
-            
-            {/* <div className="additional-container"> */}
-              {/* <img src={provider.imageURL} alt="Additional Image" /> */}
-              {/* <img src= {my} alt="my" />   */}
-            {/* </div> */}
           </div>
         ))}
       </div>

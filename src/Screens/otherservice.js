@@ -2,7 +2,6 @@ import React from 'react';
 import { FaTruckMoving, FaTshirt, FaLeaf } from 'react-icons/fa';
 import Layout from './layout';
 import { Link } from 'react-router-dom';
-// import '../css/Otherservices.css'; // Assuming you have a CSS file named Otherservices.css for styling
 import '../css/Services.css';
 function Otherservices() {
   const services = [
