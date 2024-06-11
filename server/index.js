@@ -8,11 +8,15 @@ const server = express();
 main().catch(err => console.log(err));
 // 
 async function main() {
-  await mongoose.connect('mongodb://127.0.0.1:27017/homeseva');
+  await mongoose.connect('mongodb+srv://homeseva:home123@cluster0.i6tgdbe.mongodb.net/');
   console.log('db connected');
 }
 // 
 const userSchema = new mongoose.Schema({
+    
+
+
+    
     username: String,
     Email: String,
     Password: String,
