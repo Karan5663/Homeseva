@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { FaHome, FaPaintRoller, FaWrench, FaBolt, FaBug, FaCogs, FaTruckMoving, FaTshirt, FaLeaf } from 'react-icons/fa';
+import { FaHome, FaPaintRoller,FaUser, FaWrench, FaBolt, FaBug, FaCogs, FaTruckMoving, FaTshirt, FaLeaf } from 'react-icons/fa';
 import '../css/Services.css';
 import Layout from './layout';
 import { Link } from 'react-router-dom';
@@ -44,19 +44,9 @@ function Ourservices() {
       </div>
 
       <div className="services-container3">
-        <Link to="/Moving" className="service-card">
+        <Link to="/otherservice" className="service-card">
           <FaTruckMoving className="icon" />
-          <h3>Moving</h3>
-        </Link>
-
-        <Link to="/Laundry" className="service-card">
-          <FaTshirt className="icon" />
-          <h3>Laundry</h3>
-        </Link>
-
-        <Link to="/Gardening" className="service-card">
-          <FaLeaf className="icon" />
-          <h3>Gardening</h3>
+          <h3>Other services</h3>
         </Link>
       </div>
       </div>

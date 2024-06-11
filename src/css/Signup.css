@@ -54,7 +54,21 @@
   button:hover {
     background-color: #ff8200;
   }
-/* .baground {
-    background-color: #fffc9c;
-    height: 735px;
-  } */
+
+  .password-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
+  
+  .password-container input {
+    flex: 1;
+  }
+  
+  .toggle-password {
+    position: absolute;
+    right: 10px;
+    cursor: pointer;
+    user-select: none;
+  }
+  

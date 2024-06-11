@@ -1,24 +1,3 @@
-
-// import React from 'react';
-// 
-// 
-// function Contact() {
-//   return (
-//     <Layout>
-//     <div className="contact-container" >
-//       <h1>Contact Us</h1>
-//       <div className="contact-info">
-//         <p>Email: info@homeseva.com</p>
-//         <p>Phone: 123-456-7890</p>
-//         <p>Address: Kolhapur , Maharastra</p>
-//       </div>
-//     </div>
-//     </Layout>
-//   );
-// }
-
-// export default Contact;
-
 import React, { useState } from 'react';
 import '../css/Contact.css';
 import Layout from './layout';
